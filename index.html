@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChaosStorm — Minecraft сервер</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="nav">
+        <a href="#info" class="nav-link">Информация</a>
+        <a href="#modes" class="nav-link">Режимы</a>
+        <a href="#rules" class="nav-link">Правила</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+    </nav>
+
+    <div class="hero">
+        <div class="logo-row">
+            <div class="lightning left"></div>
+            <h1 class="logo">ChaosStorm</h1>
+            <div class="lightning right"></div>
+        </div>
+        <p class="tagline">PvP • Survival • Clans • Events</p>
+        <a href="#" class="join-btn" id="copyIP">▶ СКОПИРОВАТЬ IP</a>
+    </div>
+</header>
+
+<section class="stats">
+    <div class="stat">
+        <h3>1.16.5</h3>
+        <p>Версия сервера</p>
+    </div>
+    <div class="stat">
+        <h3>24/7</h3>
+        <p>Работа без остановки</p>
+    </div>
+</section>
+
+<section id="info" class="section">
+    <div class="box">
+        <h2>🌩 О сервере</h2>
+        <p>
+            ChaosStorm — динамичный Minecraft-сервер с уникальными PvP аренами, кланами и ивентами.
+            Каждое приключение уникально, а обновления выходят регулярно.
+        </p>
+    </div>
+</section>
+
+<section id="modes" class="section dark">
+    <h2 class="section-title">🎮 Режимы</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>PvP Arena</h3>
+            <p>Эпические сражения и турниры с лучшими игроками.</p>
+        </div>
+        <div class="card">
+            <h3>Survival</h3>
+            <p>Выживание без ограничений и с полной свободой действий.</p>
+        </div>
+        <div class="card">
+            <h3>Clans</h3>
+            <p>Создавай клан, развивай его и доминируй на сервере.</p>
+        </div>
+    </div>
+</section>
+
+<section id="rules" class="section">
+    <div class="box">
+        <h2>📜 Правила</h2>
+        <ul>
+            <li>Читы запрещены</li>
+            <li>Использование багов запрещено</li>
+            <li>Уважение к игрокам и администрации</li>
+            <li>Соблюдай правила PvP и эвентов</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contacts" class="section dark">
+    <div class="box">
+        <h2>📞 Контакты</h2>
+        <p>
+            Discord: discord.gg/chaosstorm<br>
+            VK: vk.com/chaosstorm<br>
+            Email: support@chaosstorm.ru
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ChaosStorm | Все права защищены</p>
+</footer>
+
+<script>
+document.getElementById("copyIP").onclick = function() {
+    navigator.clipboard.writeText("ChaosStormM.aternos.me");
+    alert("IP скопирован!");
+}
+
+// Плавный скролл
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
