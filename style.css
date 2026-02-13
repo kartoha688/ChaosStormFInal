@@ -1,0 +1,77 @@
+/* Шрифты и фон */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(-45deg, #0b0020, #1a001f, #0b0020, #1a001f);
+    background-size: 400% 400%;
+    color: #fff;
+    overflow-x: hidden;
+    animation: gradientBG 15s ease infinite;
+    scroll-behavior: smooth; /* плавный скролл CSS */
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.nav a:hover, .nav a.active {
+    background: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+}
+
+/* Hero */
+.hero { text-align: center; padding: 100px 20px; }
+.logo-row { display: flex; justify-content: center; align-items: center; gap: 40px; }
+.logo { font-family: 'Press Start 2P', cursive; font-size: 72px; background: linear-gradient(90deg, #ff00ff, #00ffff, #ff8000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff; animation: glow 2s infinite alternate; }
+.lightning { width: 6px; height: 160px; background: linear-gradient(to bottom, #00ffff, #ff00ff); box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff; clip-path: polygon(50% 0%, 60% 20%, 40% 20%, 70% 60%, 45% 60%, 55% 100%); animation: strike 3s infinite; }
+.lightning.left { animation-delay: 0s; }
+.lightning.right { animation-delay: 1.5s; }
+
+/* Анимации */
+@keyframes strike { 0% {opacity:0; transform:scaleY(0.5);} 5% {opacity:1; transform:scaleY(1.2) rotate(-5deg);} 10% {opacity:0.3; transform:scaleY(1) rotate(5deg);} 15% {opacity:1; transform:scaleY(1) rotate(-2deg);} 20% {opacity:0;} 100% {opacity:0;} }
+@keyframes gradientBG { 0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} }
+@keyframes glow { 0% {text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;} 100% {text-shadow: 0 0 50px #ff00ff, 0 0 80px #00ffff;} }
+
+/* Tagline */
+.tagline { margin: 20px 0 40px; font-size: 22px; color: #a0cfff; animation: glow 3s infinite alternate; }
+
+/* Кнопка */
+.join-btn { padding: 15px 50px; background: linear-gradient(90deg, #ff00ff, #00ffff); color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; font-family: 'Press Start 2P', cursive; transition: 0.3s; box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff; }
+.join-btn:hover { transform: scale(1.1); background: linear-gradient(90deg, #ff80ff, #80ffff); box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff; }
+
+/* Статистика */
+.stats { display: flex; justify-content: center; gap: 60px; padding: 50px 20px; }
+.stat h3 { font-size: 38px; color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+.stat p { opacity: 0.9; }
+
+/* Секции */
+.section { padding: 80px 20px; display:flex; justify-content:center; }
+.section.dark { background: rgba(0,0,0,0.65); }
+.section-title { font-size: 36px; margin-bottom: 30px; color: #ff00ff; text-shadow: 0 0 10px #ff00ff; }
+
+/* Карточки */
+.cards { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; }
+.card { background: rgba(0,0,0,0.85); padding: 25px; width: 100%; max-width: 240px; border-radius: 15px; border: 2px solid #ff00ff; text-align: center; transition: 0.4s; box-shadow: 0 0 15px #ff00ff; }
+.card:hover { transform: translateY(-10px) scale(1.08); box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff; }
+
+/* Правила */
+ul { padding-left: 20px; }
+li { margin: 12px 0; }
+
+/* Футер */
+footer { text-align: center; padding: 25px; background: rgba(0,0,0,0.9); border-top: 3px solid #ff00ff; }
